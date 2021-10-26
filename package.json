@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "debug": "^4.3.2",
+    "express": "^4.17.1",
+    "uuid": "^8.3.2",
+    "xrpl-client": "^1.9.2"
+  },
+  "name": "jsonrpc2websocket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "TIMEOUT=60 DEBUG=post2ws* nodemon",
+    "pm2": "pm2 reload pm2.config.js --env pm2"
+  },
+  "author": "Wietse Wind <w@xrpl-labs.com>",
+  "license": "MIT",
+  "description": "Proxy HTTP POST (JSON RPC) to WebSocket (xrpld)"
+}
