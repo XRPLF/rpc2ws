@@ -50,7 +50,9 @@ const callTimeout = Number(process.env?.TIMEOUT || 60) || 60
 
 app.use((req, res, next) => {
   res.set('Access-Control-Allow-Origin', '*')
-  const realip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
+  const realip = (req.headers['x-forwarded-for'] || req.socket.remoteAddress)
+    .replace(/[, ]+/g, ',')
+    .replace(',127.0.0.1', '')
   const callid = v4()
   Object.assign(req, {realip, callid})
   next()
