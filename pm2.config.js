@@ -13,7 +13,7 @@ module.exports = {
     },
     env_pm2: {
       NODE_ENV: 'pm2',
-      PORT: 3000,
+      PORT: 80,
       TIMEOUT: 60
     }
   }]
