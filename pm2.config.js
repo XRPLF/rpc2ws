@@ -9,12 +9,10 @@ module.exports = {
     exec_mode: 'cluster',
     ignore_watch: ["node_modules", "db", ".git"],
     env: {
-      DEBUG: 'post2ws*'
-    },
-    env_pm2: {
-      NODE_ENV: 'pm2',
+      DEBUG: 'post2ws*',
       PORT: 80,
-      TIMEOUT: 60
+      TIMEOUT: 60,
+      NONFHNODES: ''
     }
   }]
 }
