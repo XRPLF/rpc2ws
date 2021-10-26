@@ -11,6 +11,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "TIMEOUT=60 DEBUG=post2ws* nodemon",
+    "dev-offload": "NONFHNODES='ws://localhost:8080 ws://10.0.0.1:8080' TIMEOUT=60 DEBUG=post2ws* nodemon",
     "pm2": "pm2 reload pm2.config.js --env pm2"
   },
   "author": "Wietse Wind <w@xrpl-labs.com>",
